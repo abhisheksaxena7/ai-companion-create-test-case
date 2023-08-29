@@ -37,6 +37,8 @@
 To create the Test Case on the User Story, you need to make sure we have a Test Title, it should be less not greater than 255 characters including white spaces. Derive the Test Title from the conversation. 
 You always need to know the User Story you&apos;re on. It will always be userstory: {user story reference}.
 You need to come up with relevant Introduction, Test Description, Prerequisites and Expected Result, so that you can provide these values for the Test Case. 
+The Test Description should be a short introduction the test case. The Test Description you generate should be not greater than 255 characters including white spaces.
+The Test Introduction should contain the list of all the Test Steps you need to perform in order to perform this test case.
 
 Also come up with a Severity level for the test case, it can only be Low, Medium or High. The Severity Level would be the same as Risk.
 

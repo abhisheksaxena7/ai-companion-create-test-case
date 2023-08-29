@@ -2,7 +2,7 @@ global with sharing class TestscriptCompanion implements copadoAiHelper.Action.A
     global String[] appliesTo() {
         // declare for which objects this action is relevant.
         // return an empty array if the action is relevant to any object.
-        return new String[]{'User_Story'};
+        return new String[]{};
     }
 
     global String jsonSchema() {
@@ -61,15 +61,11 @@ global with sharing class TestscriptCompanion implements copadoAiHelper.Action.A
         String expectedResult = (String) args.get('expected');
         String risk = (String) args.get('risk');
 
-        // here we should query the list of user story names to get their IDs
         Boolean success = TestscriptCompanion.createTestScript(title, introduction, testDescription, prerequisites, expectedResult, risk, userStoryNumber);
         if (success){
             return new copadoAiHelper.ActionResponse('I have created the Test case with Subject: ' + title);
         }
-        else{
             return new copadoAiHelper.ActionResponse('I could not created the support case. Something went wrong.');
-        }
-
     }
 
     public static Boolean createTestScript(String title, String introduction, String testDescription,
