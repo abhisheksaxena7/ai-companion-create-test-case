@@ -1,3 +1,9 @@
+/*
+**  Abhishek Saxena
+**  August 28, 2023
+**  This class is used with AI companion to create Test Script records
+**  on the User Story from where the AI Action has been invoked.
+*/
 global with sharing class TestscriptCompanion implements copadoAiHelper.Action.Actionable{
     global String[] appliesTo() {
         // declare for which objects this action is relevant.
